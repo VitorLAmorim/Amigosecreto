@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista</title>
+</head>
+<body>
+  <h2>Adicionar pessoa<h2>
+  <form action="/api/create" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="email" name="email"> 
+    <input type="text" placeholder="tirou" name="tirou" value = "1" hidden> 
+    <button type="submit">Submit</button>
+  </form>
+</body>
+<body>
+  <h2>Lista de pessoas<h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Email</td>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <% pis.forEach(function(data) { %>
+        <tr>
+          <td><%= data.name %></td>
+          <td><%= data.email %></td>
+          <td><a href="/api/editar/<%= data._id %>">Editar</a> |
+            <a onclick="confirmation('tem certeza que deseja deletar?','/api/delete/<%= data._id %>')" href=#>Deletar</a></td>
+        </tr>
+     <% }) %>
+   </tbody>
+   <body>
+    <button><a href="/api/sorteio">Sortear</a></button>
+
+   </body>
+
+   <script>
+    function confirmation(msg, url) {
+      if(confirm(msg)) {
+        window.location.href = url;
+      }else{ false; }
+    }
+    </script>
+</body>
+</html>

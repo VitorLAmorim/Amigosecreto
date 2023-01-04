@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista</title>
+</head>
+
+<body>
+  <h2>Lista de pessoas<h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Tirou</td>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <% pis.forEach(function(data) { %>
+        <tr>
+          <td><%= data.name %></td>
+          <td><%= data.tirou %></td>
+        </tr>
+     <% }) %>
+   </tbody>
+   <button><a href="/api/sorteio">Sortear Novamente</a></button>
+</body>
+</html>
