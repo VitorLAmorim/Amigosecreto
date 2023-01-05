@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// PI Schema
-const PISchema = new Schema({
+
+const BDSchema = new Schema({
   name: {
   type: String,
   required: [true, '*Campo obrigatório!']
@@ -12,9 +12,8 @@ const PISchema = new Schema({
   tirou: {
     type : String
   }
-// TODO: geo location
+
 });
-// criar Modelo_PI baseado em PISchema: ‘PontosInteresse’->nome da // coleção
-const PI = mongoose.model('AmigoSecreto', PISchema);
-// exportar Modelo_PI
-module.exports = PI;
+
+const BD = mongoose.model('AmigoSecreto', BDSchema);
+module.exports = BD;
