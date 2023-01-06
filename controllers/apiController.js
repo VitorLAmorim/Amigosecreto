@@ -2,48 +2,48 @@
 // importar modelo
 
 const nodemailer = require('nodemailer');
-var alert = require('alert');
 const BD = require('../models/ApiModels');
 const { pipeline } = require('stream');
 
 
 exports.teste = function (req, res, next) {
-  BD.find({}).then(function(pi){
-  res.json({message:pi});
+  BD.find({}).then(function(data){
+  res.json({data});
   }).catch(next);
 };
 
 
 exports.update = function (req, res, next) {
   BD.findByIdAndUpdate({_id: req.params.id},
-    req.body).then(function(){  
-  res.redirect('/api/Home');
+    req.body).then(function(pi){  
+  res.json(pi);
   }).catch(next);
 };
 
 exports.edit = function (req, res, next) {
-  BD.findOne({_id: req.params.id}).then(function(pi){
-    res.render('Editar', {resposta: pi});
+  BD.findOne({_id: req.params.id}).then(function(data){
+    res.json({data});
   }).catch(next);
 };
 
 exports.delete = function (req, res, next) {
-   BD.findOneAndDelete({_id: req.params.id}).then(function(BD){
+  console.log('entrou');
+   BD.findOneAndDelete({_id: req.params.id}).then(function(pi){
     console.log("Registo eliminado com sucesso!");
-    res.redirect('/api/Home');
+    res.json(pi);
   }).catch(next);
 };
 
 
 exports.create = function (req, res,next) {
     BD.create(req.body).then(function(pi){
-    res.redirect('/api/Home');
+    res.json(pi);
   }).catch(next);
 };
 
-exports.listAll = function (req, res, next) {
+exports.homepage = function (req, res, next) {
   BD.find({}).then(function(pi){
-    res.render('Frontpage', {resposta: pi});
+    res.json(pi);
   }).catch(next);
 };
 
@@ -51,8 +51,9 @@ exports.sorteio = function (req, res, next) {
   BD.find({}).then(function(pi) 
   { 
     SorteiaNomes(pi);
-  }); 
-  next();
+    res.json(pi);
+  }).catch(next);
+  
 }
 
 exports.listasorteio = function (req, res, next) {

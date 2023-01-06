@@ -6,7 +6,7 @@
 </head>
 <body>
   <h2>Adicionar pessoa<h2>
-  <form action="/api/create" method="POST">
+  <form action="/create" method="POST">
     <input type="text" placeholder="name" name="name">
     <input type="text" placeholder="email" name="email"> 
     <input type="text" placeholder="tirou" name="tirou" value = "1" hidden> 
@@ -28,13 +28,13 @@
         <tr>
           <td><%= data.name %></td>
           <td><%= data.email %></td>
-          <td><a href="/api/editar/<%= data._id %>">Editar</a> |
-            <a onclick="confirmation('tem certeza que deseja deletar?','/api/delete/<%= data._id %>')" href=#>Deletar</a></td>
+          <td><a href="/editar/<%= data._id %>">Editar</a> |
+            <a onclick="confirmation('tem certeza que deseja deletar?','/delete/<%= data._id %>')" href=#>Deletar</a></td>
         </tr>
      <% }) %>
    </tbody>
    <body>
-    <button><a href="/api/sorteio">Sortear</a></button>
+    <button><a href="/sorteio">Sortear</a></button>
 
    </body>
 

@@ -6,11 +6,11 @@
 </head>
 <body>
 <h2>Editar</h2>
-  <form action="/api/update/<%= resposta._id %>" method="POST">
+  <form action="/update/<%= resposta._id %>" method="POST">
     <input type="text" value="<%= resposta.name %>" name="name">
     <input type="text" value="<%= resposta.email %>" name="email">
     <br />
-    <button><a href="/api/listall">Voltar</a></button>
+    <button><a href="/Home">Voltar</a></button>
     <button type="submit">Salvar</button>
   </form>
 </body>
