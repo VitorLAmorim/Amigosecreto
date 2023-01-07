@@ -5,10 +5,17 @@ Backend em NodeJS de um sistema em que é realizado o cadastro de pessoas com no
 
 
 
-#Para rodar o programa
+## Para rodar o programa
 
 - Primerio clone o repositório com:
   git clone https://github.com/VitorLAmorim/AmigosecretoBackEnd
   
-- Entre na pasta raiz
+- Entre na pasta raiz:
   cd AmigosecretoBackEnd
+
+- Execute o programa com:
+  npm start
+  
+  - Depois vá para a pagina no git do front-end para executar a parte visual do programa
+  
+  https://github.com/VitorLAmorim/AmigosecretoBackEnd
