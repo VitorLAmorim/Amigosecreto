@@ -18,4 +18,4 @@ Backend em NodeJS de um sistema em que é realizado o cadastro de pessoas com no
   
 - Depois vá para a pagina no git do front-end para executar a parte visual do programa
   
-  -  https://github.com/VitorLAmorim/AmigosecretoBackEnd
+  -  https://github.com/VitorLAmorim/AmigosecretoFrontEnd
