@@ -4,3 +4,5 @@ Repositório contendo o backend de um projeto cujo objetivo é um CRUD de pessoa
 
 
 Para rodar o programa clone o repositório e use o comando npm run build.
+
+é necessário criar um banco de dados no mongodb e inserir o usuário e senha para conexão na página app.js
