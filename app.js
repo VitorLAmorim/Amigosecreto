@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 
 //CONEXÃO BD
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://remoto:remoto123@amigosecreto.udm3xsb.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://remoto:'username'@'senha');
 mongoose.connection.on('connected', function () {
   console.log('Connected to Database ');
 });
